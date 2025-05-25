@@ -10,9 +10,9 @@
 Narra o autor, em síntese, que:\n
 `blocos narrativos detalhados (cada um correspondente a uma unidade contextual) em lista em números romanos com quebra de linha. Ex: (i) ... \n(ii) ... \n`
 Argumenta que... `síntese dos argumentos jurídicos, em um mesmo parágrafo, em texto corrido`
-Ao final, requer... `enumeração dos pedidos principais (ignorar pedido de citação, produção de prova, etc.), em um mesmo parágrafo`.
-Deu à causa o valor de ...
-Juntou documentos.
+Ao final, requer... `enumeração dos pedidos principais (ignorar pedido de citação, produção de prova, etc.), em um mesmo parágrafo`.  
+Deu à causa o valor de ...  
+Juntou documentos.  
 `se houve decisão inicial, enumerar as deliberações, em um único parágrafo. Inicie com: "A decisão de Id. XXXXX (deliberações)..."`
 
 <se (houver ata de audiência de conciliação)>

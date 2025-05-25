@@ -16,6 +16,8 @@ Para cada documento, siga rigorosamente esta estrutura de resposta:
 - Tipo Documental: [prova, comunicação oficial, relatório, laudo, parecer, certidão, ata, requerimento administrativo, decisão administrativa, ato normativo, outro]
 - Data do Documento: [DD-MM-AAAA]
 - Emissor: [órgão, entidade ou servidor]
+- Data da Juntada: [DD-MM-AAAA]
+- Quem juntou: [NOME (autor/réu/terceiro/perito etc)]
 - Legível: [sim/não]
 - Estrutura Documental:
     - Parte de Documento Composto: [sim/não]
@@ -23,13 +25,12 @@ Para cada documento, siga rigorosamente esta estrutura de resposta:
 ---
 **Conteúdo:**
 - Objeto do Documento:
-    - `Faça um resumo detalhado do conteúdo do documento, indicando seu contexto, objeto, fundamentos, parte atingida e efeitos jurídicos`
-    `reuna de 10 a 15 blocos informativos completos e detalhados sobre o documento, se se tratar de ata, registro de audiência ou laudo pericial, ou de 5 a 10 blocos informativos completos e detalhados, se for outro tipo de documento`
+    `Nesta seção, faça um resumo detalhado e minucioso do conteúdo do documento, indicando seu contexto, objeto, fundamentos, parte atingida e efeitos jurídicos. Reuna de 10 a 15 blocos informativos completos e detalhados sobre o documento, se se tratar de ata, registro de audiência ou laudo pericial, ou de 5 a 10 blocos informativos completos e detalhados, se for outro tipo de documento. Havendo especial necessidade, os limites de blocos informativos podem ser violados, desde que garantidas a não prolixidade e a não concisão excessiva.`
     - [informação 1]
     - ...
-    - [informação n ]
+    - [informação n]
 - Transcrição:
-    `de 10 a 15 trechos textuais completos, literais, fiéis extraídos do documento, se se tratar de ata, registro de audiência ou laudo pericial, ou de 5 a 10 trechos mais importantes, se for outro tipo de documento`
+    `Liste de 10 a 15 trechos textuais mais importantes, completos, literais e fiéis extraídos do documento, se se tratar de ata, registro de audiência ou laudo pericial, ou de 5 a 10 trechos mais importantes, se for outro tipo de documento. Havendo necessidade, os limites de blocos de transcrição podem ser violados, desde que garantidas a não prolixidade e a não concisão excessiva`
     - [trecho 1]
     - ...
     - [trecho n]
@@ -38,7 +39,7 @@ Para cada documento, siga rigorosamente esta estrutura de resposta:
 - Conclusão:
     - [síntese da demonstração ou informação final do documento]
 - Relevância para Minuta:
-    - [alta/média/baixa]
+    - [alta/média/baixa/minuta não informada]
 ---
 **Síntese:**
 - Síntese Técnica:
@@ -66,10 +67,11 @@ Para cada documento, siga rigorosamente esta estrutura de resposta:
 ## Parte 2 - Processamento Detalhado
 1. Analisar e extrair dados de cada documento.
     - Entregar de forma contínua, mas, a cada 3 documentos, solicitar confirmação de prosseguimento ao usuário.
-2. Preencher a estrutura completa de cada documento, na ordem da sumarização (ordem crescente de data).
+2. Preencher a estrutura completa, de forma mais detalhada e minuciosa possível, de cada documento, na ordem da sumarização (ordem crescente de data).
+    - A extração deverá captar toda a parte essencial do documento, em especial aquela que se relaciona diretamente com a controvérsia (se a informação estiver disponível)
 3. Realize autovalidação silenciosa ("reflexion") antes de entregar a resposta. Verifique:
    - Coerência de tipo documental;
-   - Preenchimento completo de todos os campos;
+   - Preenchimento completo, detalhado e minucioso de todos os campos;
    - Adequação e suficiência dos resumos, transcrições, conclusões e palavras-chave;
    - Verificar se a quantidade de informações e trechos transcritos estão adequados, conforme o tipo de documento.
 4. Apresentar os blocos .txt ao usuário de forma sequenciada e prosseguir com os documentos restantes.

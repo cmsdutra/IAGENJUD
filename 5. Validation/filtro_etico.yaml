@@ -1,0 +1,374 @@
+# FILTRO ÉTICO PARA USO DE IA NO PODER JUDICIÁRIO
+# Baseado na Resolução CNJ nº 615/2025
+# Assessoria de Juiz Federal - Extração, Análise e Redação de Minutas
+
+metadata:
+  versao: "1.0"
+  base_legal: "Resolução CNJ nº 615/2025"
+  ultima_atualizacao: "2025-05-25"
+  responsavel: "Assessoria Juiz Federal"
+  descricao: "Filtro ético para uso de IA em atividades de extração de dados processuais, análise e redação de minutas"
+
+# FUNDAMENTOS OBRIGATÓRIOS (Art. 2º)
+fundamentos_obrigatorios:
+  respeito_direitos_fundamentais:
+    descricao: "Observância integral aos direitos fundamentais e valores democráticos"
+    nivel_criticidade: "CRÍTICO"
+    verificacao_continua: true
+    
+  centralidade_pessoa_humana:
+    descricao: "Manutenção da pessoa humana como centro de todas as decisões"
+    nivel_criticidade: "CRÍTICO"
+    validacao_requerida: true
+    
+  supervisao_humana:
+    descricao: "Supervisão humana obrigatória em todas as etapas"
+    nivel_criticidade: "CRÍTICO"
+    substituicao_automatizada: false
+
+# VEDAÇÕES ABSOLUTAS (Art. 10)
+vedacoes_absolutas:
+  decisoes_sem_revisao:
+    tipo: "PROIBIDO"
+    descricao: "Soluções que não permitam revisão humana dos resultados"
+    aplicacao: "TODAS_ATIVIDADES"
+    penalidade: "BLOQUEIO_IMEDIATO"
+    
+  valoracao_personalidade:
+    tipo: "PROIBIDO"
+    descricao: "Avaliação de traços de personalidade para prever crimes ou reiteração"
+    contexto: ["CRIMINAL", "EXECUCAO_PENAL"]
+    exceções: []
+    
+  classificacao_pessoas:
+    tipo: "PROIBIDO"
+    descricao: "Ranqueamento de pessoas por comportamento ou atributos pessoais"
+    aplicacao: "AVALIACOES_DIREITOS_MERITOS"
+    
+  reconhecimento_emocional:
+    tipo: "PROIBIDO"
+    descricao: "Identificação biométrica para reconhecimento de emoções"
+    tecnologias_vedadas: ["reconhecimento_facial_emocional", "analise_biometrica_emocional"]
+
+# CLASSIFICAÇÃO DE RISCO - ALTO RISCO (Art. 11 e Anexo)
+atividades_alto_risco:
+  AR1_perfis_comportamentais:
+    descricao: "Identificação de perfis e padrões comportamentais"
+    medidas_obrigatorias:
+      - avaliacao_impacto_algoritmico
+      - auditoria_regular
+      - monitoramento_continuo
+      - documentacao_completa
+    frequencia_auditoria: "SEMESTRAL"
+    
+  AR2_valoracao_provas:
+    descricao: "Aferição da adequação e valoração de meios de prova"
+    restricoes:
+      - "Vedado uso autônomo para valoração"
+      - "Apenas apoio com supervisão magistrado"
+      - "Transparência total do processo"
+    supervisao_requerida: "CONTINUA"
+    
+  AR3_tipificacao_crimes:
+    descricao: "Valoração e tipificação de fatos como crimes"
+    uso_permitido: false
+    excecoes: ["rotinas_execucao_penal", "medidas_socioeducativas"]
+    justificativa: "Vedação expressa Art. 10, II"
+    
+  AR4_aplicacao_norma:
+    descricao: "Formulação de juízos sobre aplicação da norma jurídica"
+    uso_permitido: "APENAS_APOIO"
+    decisao_final: "EXCLUSIVAMENTE_HUMANA"
+    
+  AR5_identificacao_biometrica:
+    descricao: "Identificação facial/biométrica para monitoramento"
+    autorizacao_previa: "COMITE_NACIONAL_IA"
+    plano_conformidade_obrigatorio: true
+
+# CLASSIFICAÇÃO DE RISCO - BAIXO RISCO (Anexo)
+atividades_baixo_risco_permitidas:
+  BR1_atos_ordinatorios:
+    descricao: "Atos processuais ordinatórios e apoio administrativo"
+    atividades_incluidas:
+      - extração de informações de sistemas
+      - classificação e agrupamento de processos
+      - certificação de atos processuais
+      - sumarização de documentos
+      - enriquecimento de cadastros
+    supervisao_obrigatoria: true
+    
+  BR2_deteccao_padroes:
+    descricao: "Detecção de padrões decisórios e precedentes"
+    finalidades:
+      - apoio interno ao tribunal
+      - uniformização da jurisprudência
+      - detecção de desvios de padrões
+    sem_substituicao_avaliacao_humana: true
+    
+  BR3_subsidios_decisao:
+    descricao: "Subsídios para tomada de decisão via relatórios"
+    tecnicas_permitidas:
+      - jurimetria
+      - integração de fontes de informação
+      - detecção de padrões decisórios
+    vedacoes_especificas:
+      - "Sem valorações morais sobre provas"
+      - "Sem análise de perfis de pessoas"
+      
+  BR4_producao_textos:
+    descricao: "Produção de textos de apoio para atos judiciais"
+    condicoes_obrigatorias:
+      - supervisao_magistrado: true
+      - versao_final_humana: true
+      - decisoes_preliminares_e_merito: "EXCLUSIVAMENTE_MAGISTRADO"
+    
+  BR7_transcricao_audio:
+    descricao: "Transcrição de áudio e vídeo"
+    revisao_final_obrigatoria: true
+    responsavel_revisao: "PESSOA_HABILITADA"
+    
+  BR8_anonimizacao:
+    descricao: "Anonimização de documentos"
+    finalidade: "Conformidade com privacidade e proteção de dados"
+    verificacao_qualidade: "OBRIGATORIA"
+
+# DIRETRIZES PARA EXTRAÇÃO DE DADOS PROCESSUAIS
+extracao_dados_processuais:
+  dados_permitidos:
+    - "Dados não sigilosos de processos públicos"
+    - "Informações já disponíveis publicamente"
+    - "Metadados processuais não sensíveis"
+    
+  dados_vedados:
+    - "Dados sigilosos sem anonimização"
+    - "Informações protegidas por segredo de justiça"
+    - "Dados pessoais sensíveis sem base legal"
+    
+  protecoes_obrigatorias:
+    anonimizacao:
+      quando: "Sempre que possível e obrigatório para dados sigilosos"
+      metodo: "Na origem, antes do processamento"
+      verificacao: "Auditável e rastreável"
+      
+    curadoria_dados:
+      fontes_preferenciais: ["governamentais", "oficiais"]
+      validacao_qualidade: "OBRIGATORIA"
+      representatividade: "Diversidade de situações e contextos"
+
+# DIRETRIZES PARA ANÁLISE DE DADOS
+analise_dados:
+  principios_obrigatorios:
+    imparcialidade:
+      descricao: "Análise sem vieses discriminatórios"
+      verificacao: "Monitoramento contínuo"
+      correcao: "Imediata quando identificado viés"
+      
+    transparencia:
+      explicabilidade: "Sempre que tecnicamente possível"
+      documentacao: "Linguagem simples e acessível"
+      auditabilidade: "Processos verificáveis"
+      
+    precisao:
+      validacao_resultados: "OBRIGATORIA"
+      margem_erro: "Claramente informada"
+      limitacoes: "Explicitadas aos usuários"
+
+# DIRETRIZES PARA REDAÇÃO DE MINUTAS
+redacao_minutas:
+  nivel_risco: "BAIXO_RISCO" # BR4 - MAS COM RESTRIÇÕES CRÍTICAS
+  
+  condicoes_obrigatorias:
+    supervisao_humana:
+      momento: "Durante todo o processo"
+      responsavel: "Magistrado titular"
+      decisao_final: "EXCLUSIVAMENTE_HUMANA"
+      orientacao_previa_obrigatoria: true
+      
+    elementos_vedados_ia_autonoma:
+      decisoes_substantivas:
+        - "Decisões sobre preliminares"
+        - "Análise e conclusões de mérito"
+        - "Valoração de provas"
+        - "Aplicação de penas"
+        - "Fixação de indenizações"
+        - "Interpretação de normas jurídicas"
+        - "Subsunção fato-norma"
+        - "Juízos de procedência/improcedência"
+        - "Definição de teses jurídicas"
+      descricao: "IA NÃO pode criar conteúdo decisório sem orientação expressa prévia"
+      
+    elementos_permitidos_ia_com_orientacao:
+      redacao_orientada:
+        - "Redigir conforme orientação expressa do magistrado"
+        - "Estruturar argumentos já definidos pelo magistrado"
+        - "Desenvolver fundamentação seguindo direcionamento específico"
+        - "Organizar decisões já tomadas pelo magistrado"
+      condicao_essencial: "SEMPRE com orientação prévia expressa sobre o conteúdo decisório"
+      
+    elementos_permitidos_ia_autonoma:
+      aspectos_formais:
+        - "Formatação e estrutura padrão"
+        - "Citação de jurisprudência (sem interpretação)"
+        - "Correção ortográfica e gramatical"
+        - "Padronização de modelos formais"
+        - "Relatório objetivo de fatos (sem valoração)"
+        - "Transcrição de alegações das partes"
+        - "Organização cronológica de eventos"
+      
+  transparencia_obrigatoria:
+    registro_uso_ia:
+      sistema_interno: true
+      mencao_decisao: "Facultativa ao magistrado"
+      finalidade: "Estatística, monitoramento e auditoria"
+
+# PROTEÇÃO DE DADOS E SEGURANÇA
+protecao_dados:
+  lgpd_compliance:
+    base_legal_obrigatoria: true
+    consentimento_quando_necessario: true
+    minimizacao_dados: "Apenas dados estritamente necessários"
+    
+  seguranca_informacao:
+    criptografia: "Dados em trânsito e repouso"
+    controle_acesso: "Baseado em permissões"
+    auditoria_logs: "Registros automáticos de operações"
+    
+  segredo_justica:
+    dados_sigilos_vedados: true
+    excecao_anonimizacao: "Na origem com verificação técnica"
+    mecanismos_proteção: "Técnicos e procedimentais"
+
+# SUPERVISÃO E MONITORAMENTO
+supervisao:
+  supervisao_humana:
+    obrigatoria: true
+    momentos: ["desenvolvimento", "implantação", "uso", "atualizações"]
+    nivel_ajustavel: "Conforme grau de risco"
+    
+  monitoramento_continuo:
+    vieses_discriminatorios: "Detecção e correção imediata"
+    conformidade_direitos: "Verificação permanente"
+    performance_sistema: "Indicadores de qualidade"
+    
+  medidas_corretivas:
+    suspeicao_temporaria: "Quando identificados problemas"
+    correcao_obrigatoria: "Eliminação de vieses"
+    descontinuidade: "Se correção impossível"
+
+# TRANSPARÊNCIA E PRESTAÇÃO DE CONTAS
+transparencia:
+  informacao_usuarios:
+    uso_ia_claro: "Linguagem simples e acessível"
+    limitacoes_explicitas: "Capacidades e restrições"
+    carater_consultivo: "Não vinculante, sempre com supervisão"
+    
+  documentacao:
+    funcionamento_sistema: "Descrição em linguagem simples"
+    dados_utilizados: "Fontes e tratamento"
+    mecanismos_supervisao: "Processos de controle humano"
+    
+  auditoria:
+    periodicidade: "Conforme determinação do Comitê Nacional"
+    relatorios_publicos: "Resultados e recomendações"
+    acesso_oab_mp: "Conforme art. 12, VIII"
+
+# CAPACITAÇÃO E TREINAMENTO
+capacitacao:
+  obrigatoria_antes_uso: true
+  conteudo_minimo:
+    - "Limitações da IA"
+    - "Riscos e vieses algorítmicos"
+    - "Uso ético e responsável"
+    - "Análise crítica de resultados"
+    - "Supervisão adequada"
+    
+  responsabilidade:
+    tribunal: "Oferecer capacitação contínua"
+    usuario: "Participar e aplicar conhecimentos"
+    magistrado: "Supervisão e decisão final"
+
+# CONTROLES ESPECÍFICOS POR ATIVIDADE
+controles_atividades:
+  extracao_dados:
+    classificacao_risco: "BAIXO" # BR1
+    autorizacao_necessaria: false
+    supervisao: "Periódica"
+    documentacao: "Simplificada"
+    
+  analise_padroes:
+    classificacao_risco: "BAIXO" # BR2/BR3
+    sem_substituicao_humana: true
+    finalidade: "Apoio interno apenas"
+    transparencia: "Metodologia clara"
+    
+  redacao_apoio:
+    classificacao_risco: "BAIXO" # BR4 - COM RESTRIÇÕES CRÍTICAS
+    supervisao: "Contínua magistrado"
+    decisao_final: "Exclusivamente humana"
+    
+    # VALIDAÇÃO CRÍTICA PARA REDAÇÃO
+    validacao_obrigatoria:
+      conteudo_decisorio:
+        pergunta: "A solicitação envolve criação de conteúdo decisório (mérito, valoração, conclusões jurídicas)?"
+        se_sim: 
+          - verificar: "Há orientação expressa prévia do magistrado sobre o conteúdo?"
+          - se_nao_ha_orientacao: "BLOQUEIO - Delegação decisória vedada"
+          - se_ha_orientacao: "PERMITIDO - Redigir conforme orientação expressa"
+        se_nao: "PERMITIDO - Aspectos formais e objetivos"
+        
+      elementos_criticos_vedados_sem_orientacao:
+        - "Redigir mérito sem direcionamento decisório"
+        - "Valorar provas sem orientação específica"
+        - "Concluir pela procedência/improcedência"
+        - "Interpretar dispositivos legais autonomamente"
+        - "Definir teses jurídicas"
+        - "Aplicar precedentes sem orientação"
+
+# PROCEDIMENTOS DE EMERGÊNCIA
+procedimentos_emergencia:
+  identificacao_problema:
+    comunicacao: "Até 72 horas ao Comitê Nacional"
+    suspensao_imediata: "Se risco aos direitos fundamentais"
+    analise_impacto: "Avaliação de danos"
+    
+  medidas_corretivas:
+    prioridade_maxima: "Proteção de direitos"
+    investigacao_completa: "Causas e extensão"
+    prevencao_recorrencia: "Ajustes nos sistemas"
+
+# COMPLIANCE E AUDITORIA INTERNA
+compliance:
+  verificacoes_regulares:
+    conformidade_resolucao: "Mensal"
+    protecao_dados: "Conforme LGPD"
+    seguranca_informacao: "Normas CNJ"
+    
+  registro_atividades:
+    uso_ia_documentado: true
+    decisoes_apoiadas: "Logs completos"
+    supervisao_exercida: "Evidências"
+    
+  relatorios_obrigatorios:
+    periodicidade: "Conforme determinação superior"
+    conteudo_minimo: "Uso, resultados, problemas"
+    destinatarios: ["tribunal", "comite_nacional_ia"]
+
+# RESPONSABILIDADES ESPECÍFICAS
+responsabilidades:
+  assessor:
+    - "Cumprimento integral desta resolução"
+    - "Supervisão adequada do uso de IA"
+    - "Capacitação contínua"
+    - "Comunicação de problemas"
+    
+  magistrado:
+    - "Supervisão efetiva"
+    - "Decisão final exclusiva"
+    - "Validação de resultados"
+    - "Responsabilidade pelas decisões"
+    
+  tribunal:
+    - "Fornecimento de capacitação"
+    - "Monitoramento de conformidade"
+    - "Recursos adequados"
+    - "Comunicação com CNJ"

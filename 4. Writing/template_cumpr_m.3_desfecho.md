@@ -22,9 +22,8 @@ Diante do exposto, **DECIDO**:
 
 ### PROVIDÊNCIAS DE IMPULSO PROCESSUAL
 A Secretaria da Vara deverá:
-**(i)** **intimar** as partes desta decisão;
 `listar todas as providências de secretaria necessárias`
-`para as providências de Secretaria, utilizar lista, com quebra de linha, em numerais romanos entre parênteses, em negrito (ex: "**(i)** ...; \n"). Os desdobramentos deverão ser indicados por algarismos arábicos (ex: "**(i.1)** ...; \n")`
+`para as providências de Secretaria, utilizar lista, com quebra de linha, em numerais romanos entre parênteses, em negrito (ex: "**(i)** ...; \n"). Os desdobramentos deverão ser indicados por algarismos arábicos (ex: "**(i.1)** ...; **(i.1.1)** ...; \n")`
 `Os verbos deverão estar no infinitivo e em negrito (Ex: "**(i)** **intimar** as partes desta decisão; \n")`
 
 <exemplo>

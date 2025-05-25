@@ -25,15 +25,18 @@
 ### *II. QUESTÃO JURÍDICA A SER RESPONDIDA (ISSUE)*
 ``A questão jurídica submetida à deliberação do Juízo ou da Corte é: ?``
 ### *III. NORMAS JURÍDICAS APLICÁVEIS (RULE)*
-``Enunciado jurídico abstrato extraído da interpretaçao do Tribunal sobre as normas e precedentes aplicáveis ao caso. Ou seja, a ratio decidendi que levará à conclusão do tribunal. Informe a legislação e precedentes utilizados.``
+``Apanhado das normas jurídicas (legislação e precedentes jurisprudenciais) relacionadas, de forma abstrata, à matéria. Escreva em texto corrido, de forma descritiva.``
 ### *IV. RACIOCÍNIO JURÍDICO DESENVOLDIDO (ANALYSIS)*
-``O Tribunal desenvolveu seu raciocínio seguindo as seguintes etapas: (i) ...; (ii) ...; (iii) Logo, ....``
+``O Juízo desenvolveu seu raciocínio de subsunção do caso concreto às normas relacionadas (enquadramento jurídico do caso concreto) seguindo as seguintes etapas: (i) ...; (ii) ...; ... (n) ... Logo, ....``
+***Ratio decidendi:*** *``Resumo, em um enunciado normativo abstrato, do núcleo das razões de decidir adotadas pelo juízo (a ratio decidendi da decisão).``*
 ### *V. DECISÃO (CONCLUSION)*
-``Resposta concreta e específica do juiz à questão jurídica; desfecho do caso concreto.`` 
-### *VI. DOUTRINA CITADA*
-``Se houver citação de doutrinador, liste-os no seguinte padrão: Sobrenome (ano da obra) Título da obra. Não inclua outros elementos.``
+``Resposta concreta e específica do juiz à questão jurídica; desfecho do caso concreto.``  
+---
+***Dispositivos legais citados:*** ``listar (bullet points) os dispositivos legais citados no voto vencedor. (formato: [artigo, complemento, diploma])``
+***Jurisprudência citada:*** ``listar (bullet points) os precedentes utilizados na fundamentação do voto vencedor. (formato: [TRIBUNAL. Órgão. Recurso/Ação, Relator, data de publicação - número do tema, se houver])``
+***Doutrina citada:*** ``listar (bullet points) doutrinadores citados no seguinte padrão: Sobrenome (ano da obra) Título da obra. Não inclua outros elementos.``
 
 # Regras Gerais
-- Gere a resposta em artefato ou canvas, se o recurso estiver disponível
-- Além da resposta acima, você deverá também gerar a resposta em formato .json, para download, para fins de alimentação de banco de dados.- 
+- Responda no próprio chat. 
+- Seja analítico.
 - Cite apenas fatos, normas e precedentes do caso fornecido.

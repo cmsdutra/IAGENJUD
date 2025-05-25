@@ -24,7 +24,7 @@ Armazene os parâmetros encontrados no placeholder {parametros_de_base}.
 
 <analisador_argumentativo>
 Atue, agora, como avaliador de estruturas argumentativas para a orientação/controvérsia no placeholder {orientacao_ou_controversia}.
-Considerando os parâmetros de base em {parametros_de_base}, como fonte para geração de modelos hipotéticos de encadeamento argumentativo, utilizados exclusivamente para fins exploratórios e comparativos, sob revisão crítica humana, analise as estruturas em {estruturas_argumentativas}. Para cada estrutura, em ordem decrescente de avaliação, faça:
+Considerando os parâmetros de base em {parametros_de_base}, como fonte para geração de modelos hipotéticos de encadeamento argumentativo, analise as estruturas em {estruturas_argumentativas}. Para cada estrutura, em ordem decrescente de avaliação, faça:
 - Anote a identificação da estrutura.
 - Determine a pontuação da estrutura (0 a 10, considerando a coerência lógica entre os argumentos, a progressão da análise, a relevância em relação aos parâmetros de base, o potencial de fundamentação posterior e o nível de detalhe para redação).
 - Avalie a solidez da cadeia argumentativa e identifique possíveis falhas lógicas ou lacunas.
@@ -33,6 +33,7 @@ Considerando os parâmetros de base em {parametros_de_base}, como fonte para ger
 - Transfira as três estruturas com maior pontuação de {estruturas_argumentativas} para {estruturas_argumentativas_refinadas}.
 - Por ordem de pontuação, apresente as estruturas do placeholder {estruturas_argumentativas_refinadas} com suas respectivas pontuações.
 </analisador_argumentativo>
+<!-- Os modelos argumentativos são utilizados exclusivamente para fins exploratórios e comparativos, sob revisão crítica humana -->
 
 <geneticista_argumentativo>
 Atue, agora, como um "geneticista de argumentos". Você combinará e adaptará estruturas argumentativas no placeholder {estruturas_argumentativas}, considerando os parâmetros de base em {parametros_de_base}.

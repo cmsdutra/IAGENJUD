@@ -1,5 +1,3 @@
-# FUNDAMENTOS DE DECISÃO INTERLOCUTÓRIA
-
 <template_cumpr_m.2_fundamentos>
 
 ### FUNDAMENTOS
@@ -29,8 +27,5 @@ Por outro lado, deve ser rejeitada a arguição de nulidade da penhora (Id. ...)
 </exemplo>
 
 </se>
-
-***DESDOBRAMENTOS ESPERADOS***
-`Fazer uma síntese dos desdobramentos esperados no processo, considerando as pendências e as deliberações tomadas na decisão`
 
 </template_cumpr_m.2_fundamentos>

@@ -77,12 +77,13 @@ Após apresentar a tabela, **pergunte ao usuário se deseja prosseguir com o pro
 ## PARTE 2 - PROCESSAMENTO DETALHADO DAS PETIÇÕES
 1. Analisar e extrair dados de cada petição.
    - Entregar de forma contínua, mas, a cada 3 petições, solicitar confirmação de prosseguimento ao usuário.
-2. Preencher a estrutura completa para cada petição, na ordem da tabela apresentada.
+2. Preencher a estrutura completa para cada petição, na ordem de sumarização do conteúdo.
 3. Realizar autovalidação silenciosa ("reflexion") antes de entregar:
    - Conferir se o tipo da petição está correto;
    - Conferir se todos os campos estão preenchidos;
    - Verificar se os fundamentos de fato e de direito estão detalhados, completos, dentro da intervalo de blocos narrativos e argumentativos indicados para cada tipo de petição;
    - Verificar se os pedidos estão todos listados;
+   - Conferir se a saída está em formato bloco `.txt` (plaintext)
    - Corrigir eventuais omissões ou incongruências antes da apresentação.
 4. Apresentar os blocos .txt ao usuário de forma sequenciada e prosseguir com os documentos restantes.
 

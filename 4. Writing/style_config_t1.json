@@ -3,7 +3,7 @@
         "version": "1.0.0",
         "author": "Caio Dutra",
         "last_update": "26-04-2025",
-        "beta_version": false,
+        "beta_version": true,
         "language": "Brazilian Portuguese - PT[BR]",
         "style_version": "standard",
         "jurisdiction": "Federal Court of Brazil - 1st Region"
@@ -32,17 +32,19 @@
         "formatting_rules": {
             "part_names": {
                 "general_rules": "use capital letters. Ex: JOHN DA SILVA, FREDIE MANSON",
-                "exception": ["União", "Caixa Econômica Federal", "Banco do Brasil", "Estado de/do [nome do estado]", "Município de [nome do município]"]
+                "exception": ["Conselho Regional [...]", "Ministério Público Federal", "União", "Caixa Econômica Federal", "Banco do Brasil", "Estado de/do [nome do estado]", "Município de [nome do município]"]
             },
             "part_functions": "lower letters. Ex: plaintiff, defendant, expert etc.",
             "numeric_formatting": "for amounts and deadlines, use the numeral followed by its full written form in parentheses. Ex: (R$ 1.000,00 (one thousand reais)).",
+            "numeric_formatting_exceptions": "In situations involving multiple complex values, tables, explanation em parentheses, or spreadsheets, it is allowed to present the values in numerals only, as long as clarity and accuracy are preserved.",
             "date_format": "DD/MM/YYYY"
         },
         "text_rules": {
-            "type_of_logical_structure": "continuous argumentative flow",
-            "section_content": "full argument: normative context → application to the facts → partial conclusion",
+            "type_of_logical_structure": "continuous and progressive argumentative flow",
+            "section_content": "full argument: connection with the previous section (if applicable) → normative context → application to the facts → refutation (if applicable) → partial conclusion",
+            "argumentative_flexibility": "Although the suggested structure should be observed as a standard, adaptation is allowed in cases where the nature of the topic, the simplicity of the controversy, or the linearity of the argumentation recommend it. In these situations, the drafter must ensure that the reasoning remains complete and clear, even if the logical order is adjusted.",
             "sentence_length": "average 30 words, maximum 45",
-            "conciseness_preference": "moderately detailed",
+            "conciseness_preference": "moderately detailed. Avoid redundances and non linear argumentation",
             "generation_parameters": {
                 "temperature": 0.2,
                 "top_p": 0.8,
@@ -54,7 +56,7 @@
                 "default_citation_parameters": {
                     "style": "judicial standard inline",
                     "literal_extraction": false,
-                    "paraphrase_allowed": true,
+                    "paraphrase": true,
                     "temperature": 0.0,
                     "top_p": 1.0,
                     "frequency_penalty": 0.3,
@@ -62,11 +64,13 @@
                 },
                 "jurisprudence": {
                     "jurisprudence_allowed": "user provided only",
-                    "format": "([COURT]. [Section of Court]. Leading Case, Judge, date of publication - controversy theme (if applicable)",
+                    "format": "([COURT]. [Section of Court]. Leading Case, Judge, date of publication - Theme number (if applicable))",
+                    "format_example": "(STJ. 2ª Seção. REsp 123.456/RJ, Rel. Ministro João da Silva, DJe 13/02/2025 - Tema Repetitivo 123)",
                     "integration": "detailed analysis"
                 },
                 "law": {
                     "format": "(art., §, inc., alínea, Lei, Decreto-lei, MPv)",
+                    "format_example": "(art. 21, § 2º, inc. II, a, da Lei 33.304/2029)",
                     "integration": "detailed analysis"
                 },
                 "doctrine": "forbidden",
@@ -91,13 +95,13 @@
         },
         "paragraph_rules": {
             "length": "average 100 words, maximum 150 words",
-            "ideal_number_of_paragraphs_per_section": "5 to 10",
+            "ideal_number_of_paragraphs_per_section": "5 to 10, depending on the complexity of the topic",
             "content": "full argumentation unity",
             "logical_connection": "each paragraph must logically relate to the previous one",
             "transition_phrase_required": "preferable, but not mandatory",
             "preferred_transition_phrases": ["furthermore", "in this context", "therefore", "however", "it occurs that", "in this sense", "it is worth noting", "it should be emphasized"],
             "topic_continuity": "each paragraph must develop or deepen the topic introduced earlier",
-            "list_markers": "roman lowcase in parentheses. Example: '(i)...; (ii)...'",
+            "list_markers": "roman lowcase in parentheses with a line-break. Example: '(i)...;  (ii)...'",
             "avoid_topic_shifts": true,
             "opening_sentence_guideline": "start with a linking sentence that connects to the prior paragraph",
             "flexibility_tolerance": "10%",
@@ -110,7 +114,10 @@
             "paragraph": {
                 "positive": [
                     "Em regra, cabe ao autor fazer a prova dos fatos constitutivos do direito vindicado em juízo, e ao réu, dos fatos impeditivos, modificativos e extintivos do direito do autor, conforme alegado em contestação (art. 373, inc. I e II, CPC). Sua redistribuição, permitida tanto no CDC (art. 6º, inc. VIII) quanto no próprio CPC (art. 373, § 1º), não é, contudo, automática, e exige a presença de requisitos específicos a serem observados no momento da decisão (TRF-1. 5ª Turma. AC 0002912-77.2006.4.01.3400, Rel. Desembargador Federal Souza Prudente, PJe 11/11/2021).",
-                    "Quanto às relações consumeristas, o art. 6º, inc. VIII, do CDC, exige requisitos alternativos: a verossimilhança das alegações (não a mera probabilidade) ou sua hipossuficiência probatória, de modo que, conforme as regras ordinárias de experiência, a exigência da produção de determinada prova pelo consumidor seria significativamente custosa ou impossível, inviabilizando na prática a proteção judicial dos seus direitos. Ou seja, a regra do art. 6º, inc. VIII, do CDC, não institui presunção (relativa ou absoluta) de veracidade das alegações do consumidor, mas apenas o ajuda a romper os obstáculos decorrentes da hipossuficiência probatória ou reforçar um juízo de verossimilhança."
+                    "Quanto às relações consumeristas, o art. 6º, inc. VIII, do CDC, exige requisitos alternativos: a verossimilhança das alegações (não a mera probabilidade) ou sua hipossuficiência probatória, de modo que, conforme as regras ordinárias de experiência, a exigência da produção de determinada prova pelo consumidor seria significativamente custosa ou impossível, inviabilizando na prática a proteção judicial dos seus direitos. Ou seja, a regra do art. 6º, inc. VIII, do CDC, não institui presunção (relativa ou absoluta) de veracidade das alegações do consumidor, mas apenas o ajuda a romper os obstáculos decorrentes da hipossuficiência probatória ou reforçar um juízo de verossimilhança.",
+                    "Percebe-se que, em sua redação original, o art. 11, inc. VI, da Lei nº 8.429/92, tipificava como ato de improbidade administrativa o simples ato de não prestar contas de recursos recebidos em razão de convênios ou outros ajustes, bastando a presença do dolo genérico; ou seja, da vontade livre e consciente de realizar a conduta proscrita na lei, sem a necessidade de se demonstrar o desdobramento da vontade em alcançar um resultado ilícito específico.",
+                    "O art. 311, inc. II, do Código de Processo Civil, autoriza a concessão da tutela provisória independentemente da demonstração de urgência (tutela de evidência), sempre que \"as alegações de fato puderem ser comprovadas apenas documentalmente e houver tese firmada em julgamento de casos repetitivos ou em súmula vinculante\". A despeito da redação restritiva do inciso, tenho que a interpretação deve alcançar as hipóteses de existência de tese jurídica ou enunciados firmados em outros precedentes obrigatórios, elencados no art. 927, do CPC.",
+                    "Ora, o objetivo da regra é viabilizar a redistribuição do ônus do tempo do processo, diante de um quadro de evidência (ou de qualificada probabilidade) do direito vindicado, caracterizada pela demonstração dos fatos alegados, por meio de prova pré-constituída, e pela existência de sólido entendimento sobre a questão de direito. Nesse contexto, não se justifica, do ponto de vista hermenêutico, a limitação da concessão da tutela de evidência às hipóteses de incidência de enunciado de súmula vinculante ou tese de julgamento de casos repetitivos, se, em todos os casos previstos no art. 927, há a consolidação de um entendimento sobre a questão jurídica que deverá ser observado na ocasião do julgamento."
                 ],
                 "negative": [
                     "O CPC dispõe que cabe ao autor fazer prova dos fatos constitutivos do direito. Ao réu cabe provar fatos impeditivos, extintivos ou modificativos. No caso, não houve prova da constituição da relação jurídica. Portanto, o pedido deve ser julgado improcedente."
@@ -122,9 +129,9 @@
             "forbidden": ["in casu", "ab ovo", "ad argumentandum tantum", "ex positis"]
         },
         "vocabulary_preferences": {
-            "vocabulary_preferences_language": "[PT-BR]",
-            "recurrent": ["União", "Portanto", "Destarte", "Conquanto", "Nesse contexto", "Nesse sentido", "Com efeito"],
-            "forbidden": ["União Federal", "Outrossim", "Jaez"]
+            "vocabulary_preferences_language": "Brazilian Portuguese [PT-BR]",
+            "allowed": ["União", "Portanto", "Destarte", "Conquanto", "Nesse contexto", "Nesse sentido", "Com efeito"],
+            "forbidden": ["União Federal", "Outrossim", "Jaez", "Por conseguinte", "Nesse diapasão"]
         }
     }
 }
