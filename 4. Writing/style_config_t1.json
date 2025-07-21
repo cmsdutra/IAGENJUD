@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "version": "1.0.0",
+        "version": "1.0.2-beta",
         "author": "Caio Dutra",
-        "last_update": "26-04-2025",
+        "last_update": "03-06-2025",
         "beta_version": true,
         "language": "Brazilian Portuguese - PT[BR]",
         "style_version": "standard",
@@ -23,7 +23,7 @@
         "narrative_tense": "past",
         "deliberation_tense": "present",
         "politeness_level": "neutral",
-        "verbosity": "moderately detailed",
+        "verbosity": "detailed",
         "emotional_tone": "authoritative",
         "voice_preference": "active",
         "target_reading_time": "8-15 minutes"
@@ -31,20 +31,33 @@
     "text_layout": {
         "formatting_rules": {
             "part_names": {
-                "general_rules": "use capital letters. Ex: JOHN DA SILVA, FREDIE MANSON",
-                "exception": ["Conselho Regional [...]", "Ministério Público Federal", "União", "Caixa Econômica Federal", "Banco do Brasil", "Estado de/do [nome do estado]", "Município de [nome do município]"]
+                "general_rules": "use UPPER CASE. Ex: JOHN DA SILVA, FREDIE MANSON",
+                "exceptions": ["Conselho Regional [...]", "Ministério Público Federal", "União", "Caixa Econômica Federal", "Banco do Brasil", "Estado de/do [nome do estado]", "Município de [nome do município]"]
             },
             "part_functions": "lower letters. Ex: plaintiff, defendant, expert etc.",
-            "numeric_formatting": "for amounts and deadlines, use the numeral followed by its full written form in parentheses. Ex: (R$ 1.000,00 (one thousand reais)).",
+            "numeric_formatting": "for amounts and deadlines, use the numeral followed by its full written form in parentheses. Ex: R$ 1.000,00 (one thousand reais).",
             "numeric_formatting_exceptions": "In situations involving multiple complex values, tables, explanation em parentheses, or spreadsheets, it is allowed to present the values in numerals only, as long as clarity and accuracy are preserved.",
-            "date_format": "DD/MM/YYYY"
+            "date_format": "DD/MM/YYYY",
+            "bold_usage": false,
+            "dash_usage": "use the en-dash (–) only when strictly necessary: to introduce additional information, brief explanations, or to emphasize autonomous observations. Do not use the en-dash excessively. **The em-dash is never permitted**"
         },
         "text_rules": {
             "type_of_logical_structure": "continuous and progressive argumentative flow",
-            "section_content": "full argument: connection with the previous section (if applicable) → normative context → application to the facts → refutation (if applicable) → partial conclusion",
-            "argumentative_flexibility": "Although the suggested structure should be observed as a standard, adaptation is allowed in cases where the nature of the topic, the simplicity of the controversy, or the linearity of the argumentation recommend it. In these situations, the drafter must ensure that the reasoning remains complete and clear, even if the logical order is adjusted.",
-            "sentence_length": "average 30 words, maximum 45",
-            "conciseness_preference": "moderately detailed. Avoid redundances and non linear argumentation",
+            "section_content": [
+                "controversies with identical solutions, or those amenable to joint analysis, shall be consolidated into a single section",
+                "full argument: connection with the previous section (if applicable) → introduction to the applicable institutes and normative context → application to the facts → refutation (if applicable) → partial conclusion"
+            ],
+            "section_titles": [
+                "concise summary of the controversy (max. 4 words)",
+                "be direct and concise in summarizing the controversy, selecting the key words",
+                "do not start the section title with the preposition 'OF'",
+                "do not create subtitles",
+                "use ITALIC UPPER CASE format",
+                "Examples: 'CIVIL DAMAGES ACTION', 'UNJUST ENRICHMENT' etc."
+            ],
+            "argumentative_flexibility": "Although the suggested structure shall be observed as a standard, adaptation is allowed in cases where the nature of the topic, the significant simplicity of the controversy, or the linearity of the argumentation recommend it. In these situations, the drafter must ensure that the reasoning remains complete and clear, even if the logical order is adjusted.",
+            "sentence_length": "average of 30 words, maximum of 45",
+            "conciseness_preference": "as detailed as the complexity of the controversy demands. Avoid redundancies and nonlinear argumentation",
             "generation_parameters": {
                 "temperature": 0.2,
                 "top_p": 0.8,
@@ -94,19 +107,46 @@
             }
         },
         "paragraph_rules": {
-            "length": "average 100 words, maximum 150 words",
+            "length": "average of 100 words, maximum of 150 words",
             "ideal_number_of_paragraphs_per_section": "5 to 10, depending on the complexity of the topic",
             "content": "full argumentation unity",
             "logical_connection": "each paragraph must logically relate to the previous one",
             "transition_phrase_required": "preferable, but not mandatory",
             "preferred_transition_phrases": ["furthermore", "in this context", "therefore", "however", "it occurs that", "in this sense", "it is worth noting", "it should be emphasized"],
             "topic_continuity": "each paragraph must develop or deepen the topic introduced earlier",
-            "list_markers": "roman lowcase in parentheses with a line-break. Example: '(i)...;  (ii)...'",
+            "list_markers": "lowercase roman numerals in parentheses after a line-break. Example: '(i)...; \n (ii)... \n'",
             "avoid_topic_shifts": true,
             "opening_sentence_guideline": "start with a linking sentence that connects to the prior paragraph",
             "flexibility_tolerance": "10%",
             "flexibility_tolerance_explanation": "small deviations (up to ±10% of indicated limits) are acceptable when necessary for clarity or logical flow."
         }
+    },
+    "report_rules": {
+        "purpose": "To provide a comprehensive, descriptive, and formally structured report, emphasizing a narrative flow (formal storytelling) that reconstructs the relevant events, evidence, and reasoning in a coherent and engaging manner, suitable for judicial analysis. The default mode of narrative is strictly chronological and continuous; exceptionally, when the case involves parallel procedural developments (such as the execution of a provisional measure), a topic-chronological structure may be employed for those specific segments, preserving overall narrative clarity and coherence.",
+        "default_structure": [
+            "Begin with a contextual introduction: briefly present the background and procedural history relevant to the case.",
+            "Present the facts: narrate the sequence of events in chronological order, highlighting essential details and actors, always maintaining objectivity and clarity.",
+            "Describe the evidence: list and comment on the evidence produced, explaining its relevance and the logical connection to the facts.",
+            "Develop the analysis: articulate the reasoning by connecting the facts, evidence, and applicable legal norms, ensuring that the logic of the narrative remains clear and continuous.",
+            "When the case involves parallel procedural developments (such as the execution of a provisional measure or incidental claims), these should be addressed in a dedicated section placed after the main narrative, observing a strictly chronological order within that section (topic-chronological mode), and clearly identifying the procedural scope of such developments."
+        ],
+        "style": {
+            "tone": "formal, descriptive, and impartial",
+            "narrative_technique": "third-person, continuous, and progressive storytelling",
+            "voice": "active, with preference for clear subject-agent identification",
+            "argumentation": "maintain coherence and logical progression, avoiding abrupt topic changes",
+            "transitions": "use transition phrases to guide the reader through different stages of the report (e.g., 'Initially', 'Subsequently')"
+        },
+        "layout": {
+            "default_narrative_mode": "strictly chronological, continuous prose without section or topic divisions; the entire narrative flows in a single, cohesive text, observing the precise temporal sequence of events.",
+            "parallel_processing_mode": "topic-chronological: the main narrative follows the default strictly chronological, continuous prose; parallel procedural tracks (such as the execution of a provisional measure or other concurrent incidents) are addressed in a dedicated, clearly titled section placed after the main narrative, with the internal chronology of that section also strictly observed.",
+            "paragraph_length": "average of 100 words, maximum of 180 words",
+            "section_titles": "descriptive and summarizing the content of the section, in uppercase and italic; only used in the 'parallel_processing_mode' or when strictly necessary for procedural clarity.",
+            "chronology": "strictly observe chronological order when reconstructing events in both modes, ensuring internal consistency within each narrative segment.",
+            "references": "cite documents, evidence, or procedural acts according to the standard judicial referencing rules established elsewhere in this document or in the style configuration document",
+            "reference_style_in_report": "whenever a document, procedural act, or piece of evidence is mentioned in the narrative of the report, its Id. shall be cited in parentheses immediately after the reference (e.g., 'the expert report (Id. ...)'). Do not include the protocol date of the document or act in the report narrative. Temporal sequence should be reconstructed narratively, based on the flow of events, without explicit mention of protocol dates. The mention of the date is reserved for the reasoning or when legally relevant to the merits."
+        },
+        "conciseness_preference": "as detailed as the reconstruction of events requires, avoiding unnecessary digressions, but ensuring the narrative remains comprehensive and intelligible"
     },
     "examples_and_preferences": {
         "examples": {

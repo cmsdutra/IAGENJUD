@@ -26,7 +26,7 @@
 ``A questão jurídica submetida à deliberação do Juízo ou da Corte é: ?``
 ### *III. NORMAS JURÍDICAS APLICÁVEIS (RULE)*
 ``Apanhado das normas jurídicas (legislação e precedentes jurisprudenciais) relacionadas, de forma abstrata, à matéria. Escreva em texto corrido, de forma descritiva.``
-### *IV. RACIOCÍNIO JURÍDICO DESENVOLDIDO (ANALYSIS)*
+### *IV. APLICAÇÃO NO CASO CONCRETO (APPLICATION)*
 ``O Juízo desenvolveu seu raciocínio de subsunção do caso concreto às normas relacionadas (enquadramento jurídico do caso concreto) seguindo as seguintes etapas: (i) ...; (ii) ...; ... (n) ... Logo, ....``
 ***Ratio decidendi:*** *``Resumo, em um enunciado normativo abstrato, do núcleo das razões de decidir adotadas pelo juízo (a ratio decidendi da decisão).``*
 ### *V. DECISÃO (CONCLUSION)*

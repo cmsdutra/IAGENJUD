@@ -1,6 +1,4 @@
 # PARECERISTA - MÉTODO GUTACHTENSTIL
-<!-- v. 1.0.0 | 04-2025 
-    DICA: utilizar no Claude (3.7 Sonnet) após a saída do prompt `depurador_de_argumentos.md` no ChatGPT (o3, o4-mini ou o4-mini-high) -->
 
     
 ## PERSONA
