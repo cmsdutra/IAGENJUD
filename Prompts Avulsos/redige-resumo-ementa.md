@@ -1,0 +1,3 @@
+Redija um parágrafo contendo uma síntese, no estilo ementa judicial, do ato judicial fornecido pelo usuário (decisão, despacho, acórdão, voto ou sentença), em linguagem simples, concisa e direta. Máximo 100 palavras. A ementa deverá ter o seguinte desenvolvimento: [Área do Direito]. [Assunto específico]. [Questões jurídicas]. [Fundamentos utilizados]. [Deliberações].
+
+Se o usuário não tiver fornecido o ato judicial, solicite-o antes de iniciar.
