@@ -8,12 +8,16 @@ license: GPL-3.0
 
 Esta skill conduz a elaboração da fundamentação de sentenças e decisões judiciais, de acordo com templates e regras de estilo especificadas.
 
+## Instruções Dinâmicas
+
+O arquivo `/references/instrucoes-dinamicas.yaml` contém instruções importantíssimas de sistema, análise e de estilo. Sua observância é absoluta, sobrepondo-se a todas as demais no caso de conflito.
+
 ---
 
 ## FASE 00 - PREPARAÇÃO
 
 Ao iniciar:
-1. Leia as instruções dinâmicas em `/references/system-memories.json`
+1. Leia atentamente as instruções dinâmicas em `sistema` e `analise` em `/references/instrucoes-dinamicas.yaml`.
 2. Certifique-se de que os documentos apresentados pelo usuário estão legíveis e íntegros. 
 3. Em seguida, identifique o tipo de decisão que será fundamentada:
   - **Sentença**: decisão que encerra a fase de conhecimento do processo.
@@ -30,11 +34,10 @@ ATENÇÃO: Se o tipo de decisão não estiver claro, pergunte ao usuário antes 
 
 Execute os seguintes passos:
 
-1. Carregue e leia as instruções dinâmicas em `/references/analysis-memories.json`.
-2. Leia os documentos do processo fornecidos pelo usuário (petições, decisões, laudos, atas de audiência etc.).
-3. Identifique as controvérsias relevantes para a fundamentação, separando-as por questão ou tópico.
-4. Apresente a análise de cada controvérsia no formato abaixo.
-5. Ao final, apresente a tabela-resumo e aguarde o checkpoint do usuário.
+1. Leia os documentos do processo fornecidos pelo usuário (petições, decisões, laudos, atas de audiência etc.).
+2. Identifique as controvérsias relevantes para a fundamentação, separando-as por questão ou tópico.
+3. Apresente a análise de cada controvérsia no formato abaixo.
+4. Ao final, apresente a tabela-resumo e aguarde o checkpoint do usuário.
 
 **Encaminhamentos por tipo de controvérsia**:
 
@@ -129,10 +132,10 @@ IMPORTANTE: Execute após o checkpoint da Etapa 1:
 
 ### CHECKPOINT OBRIGATÓRIO — VALIDAÇÃO DO PLANO DE ARGUMENTAÇÃO
 
-**STOP AQUI.** Após apresentar o Plano de Argumentação no formato da Etapa 2, **aguarde validação explícita do usuário antes de qualquer avanço para a Etapa 3**.
+**STOP**: Após apresentar o Plano de Argumentação no formato da Etapa 2, **aguarde validação explícita do usuário antes de qualquer avanço para a Etapa 3**.
 
 O usuário pode:
-- Aceitar o plano integralmente (responda: "Aprove o plano" ou "Prossiga para redação").
+- Aceitar o plano integralmente (por exemplo: "Aprove o plano" ou "Prossiga para redação").
 - Solicitar edições no plano (indique quais tópicos alterar, como reformular, ou adicione novos desdobramentos).
 - Rejeitar o plano e solicitar reconstrução total.
 
@@ -146,47 +149,27 @@ IMPORTANTE: **Você não avança para a Etapa 3 (Redação) sem autorização ex
 
 ### Mapeamento de Templates
 
-| Tipo de Decisão | Arquivo |
+| Tipo de Decisão | Arquivo de Template |
 |---|---|
 | Sentença | `assets/template-sentenca.md` |
 | Decisão Interlocutória | `assets/template-decisao-interlocutoria.md` |
 | Tutela Provisória | `assets/template-tutela-provisoria.md` |
 
-### Hierarquia de Regras (aplicar na fase de redação)
+Orientações:
 
-As regras de elaboração da fundamentação obedecem à seguinte hierarquia:
+1. Antes de iniciar a redação, carregue e leia atentamente as regras de estilo definidas em `/references/regras-de-estilo.md`, as instruções dinâmicas de `estilo` no arquivo `/references/instrucoes-dinamicas.yaml`, e o template correspondente ao tipo de decisão (ver mapeamento acima).
 
-1. **Arquivo de memórias** (`/references/style-memories.json`): regras absolutas — prevalecem sobre qualquer outra instrução.
-2. **Regras de estilo textual** (`/references/regras-de-estilo.md` e esta SKILL): governam a forma do texto (grafia de nomes das partes, numerais por extenso, referência a Ids., formato de citações etc.) — prevalecem sobre o template nessas matérias.
-3. **Templates** (`assets/template-*.md`): governam a estrutura e o encadeamento lógico-argumentativo (ex.: ordem de análise dos requisitos, abertura de tópicos, parágrafos-padrão) — prevalecem sobre as regras de estilo em matéria estrutural.
-4. **Arquivo-modelo fornecido pelo usuário**: prevalece sobre as regras de estilo textual, mas não sobre as memórias nem sobre a estrutura definida no template.
-
-### Instruções:
-
-1. Carregue e leia as instruções dinâmicas em `/references/style-memories.json` e as regras de estilo definidas em `/references/regras-de-estilo.md`.
-2. Carregue e leia o template correspondente ao tipo de decisão (ver mapeamento acima) antes de iniciar a redação.
-3. Siga a estrutura do template, preenchendo cada bloco conforme as instruções nele contidas.
-4. Aplique todas as regras de estilo definidas nesta skill (Seção Regras de Estilo).
-5. Siga o plano de argumentação da Etapa 2 como guia para cada parágrafo, sem citá-lo como fonte.
-6. Não invente Ids., valores, datas ou fatos não fornecidos pelo usuário. Se uma informação necessária estiver ausente, sinalize com `[COMPLETAR: descrição do dado ausente]`.
-7. Não cite jurisprudência ou doutrina que não tenha sido fornecida pelo usuário ou prevista no arquivo-modelo ou no template.
-8. Ao referenciar documentos do processo, sempre indique o Id. correspondente (salvo a petição inicial).
+2. Siga a estrutura do template, preenchendo cada bloco conforme as instruções nele contidas, observando as regras de estilo e o plano de argumentação aprovado na Etapa 2, utilizando-o como guia para cada parágrafo, sem citá-lo como fonte.
 
 9. Antes de entregar a resposta ao usuário, faça uma reflexão silenciosa, certificando-se de que a redação obedeceu as regras de estilo e o plano de argumentação, bem como as regras negativas e as restrições da skill. Caso não tenha obedecido, faça os ajustes necessários.
 
-**Formato da saída**: Utilize a ferramenta `artifacts` com os seguintes parâmetros:
-- `command`: "create"
-- `type`: "text/plain"
-- `title`: "Fundamentação — [Tipo de Decisão]"
-- `content`: [texto da fundamentação conforme redação abaixo]
-
-Produza o texto da fundamentação em prosa corrida, conforme o template. Não inclua marcações de template, comentários ou instruções do SKILL.md na saída final. O texto será entregue em artefato editável, pronto para incorporação à minuta da decisão e para edições do usuário inline.
+Produza o texto da fundamentação em prosa corrida, conforme o template. Não inclua marcações de template, comentários ou instruções do SKILL.md na saída final. O texto deverá ser entregue  pronto para incorporação à minuta.
 
 ---
 
 ## Notas de Comportamento
 
-- IMPORTANTE: as instruções de memória (`/references/*-memories.json`) têm prevalência sobre todas as demais. Leia-as atentamente de acordo com as etapas de execução.
-- Se o usuário fornecer um "esqueleto de pensamento", arquivo-modelo ou estrutura argumentativa própria, incorpore-a ao plano (fase 2) sem citá-la como fonte e sem transformá-la em tópicos numerados na redação.
+- IMPORTANTE: as instruções dinamicas (`/references/instrucoes-dinamicas`) têm prevalência sobre todas as demais. Leia-as atentamente de acordo com as etapas de execução.
+- Se o usuário fornecer um "esqueleto de pensamento", arquivo-modelo ou estrutura argumentativa própria, incorpore-a ao plano (Etapa 2) sem citá-la como fonte e sem transformá-la em tópicos numerados na redação.
 - Se todas as controvérsias compartilharem a mesma solução ou premissa fático-jurídica, reúna-as em bloco único para evitar redundâncias, desde que não haja prejuízo à estrutura lógica.
 - Questões prefaciais (gratuidade da justiça, emenda à inicial etc.) devem ser tratadas antes do mérito ou do pedido de tutela, conforme previsto nos templates.

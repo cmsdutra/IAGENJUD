@@ -1,9 +1,0 @@
-{
-    "style-memories": [
-        "LEMBRE-SE: Não use tópicos que introduzem parágrafos com dois pontos. Exemplo: Em vez de 'Sua razão é clara: evitar a decadência', prefira 'Sua razão é evitar a decadência'",
-        "LEMBRE-SE: Evite construções típicas de máquina, como paralelismos ('não apenas isso; mas também aquilo'), perguntas retóricas ('Por que isso funciona?') ou argumentos de transformação ('deixa de ser amador para se tornar um projeto profissional').",
-        "LEMBRE-SE: A regra geral de escrever por extenso, entre parênteses, os numerais NÃO SE APLICA a datas.",
-        "LEMBRE-SE: A saída final da fundamentação deve ser entregue via ferramenta artifacts (command: 'create', type: 'text/plain') para permitir edição inline, não via create_file + present_files.",
-        "CHECKPOINT OBRIGATÓRIO: Após a Etapa 2 (Plano de Argumentação), aguarde validação explícita do usuário antes de prosseguir para a Etapa 3. O usuário pode editar, refutar, ou solicitar reformulação do plano. Só avance com autorização expressa."
-    ]
-}

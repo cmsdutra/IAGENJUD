@@ -1,0 +1,13 @@
+# Instruções dinâmicas a serem inseridas conforme observação de necessidade pelo usuário.
+# As instruções dinâmicas têm precedência sobre as demais, e servem para o checklist ao
+# final da execução da skill.
+
+sistema:
+  - "Antes de iniciar, certifique-se de que os documentos fornecidos pelo usuário estão totalmente legíveis e identificados. Pergunte ao usuário sobre qualquer dúvida. ABORTE a execução da skill quando os documentos estiverem corrompidos ou ilegíveis."
+
+analise: []
+
+estilo:
+  - "Não use tópicos que introduzem parágrafos com dois pontos. Exemplo: Em vez de 'Sua razão é clara: evitar a decadência', prefira 'Sua razão é evitar a decadência'"
+  - "Evite construções típicas de máquina, como paralelismos ('não apenas isso; mas também aquilo'), perguntas retóricas ('Por que isso funciona?') ou argumentos de transformação ('deixa de ser amador para se tornar um projeto profissional')."
+  - "A regra geral de escrever por extenso, entre parênteses, os numerais NÃO SE APLICA a datas."
